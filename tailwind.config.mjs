@@ -53,6 +53,7 @@ export default {
         },
       },
       boxShadow: {
+        "right-shadow": "5px 0px 10px rgba(0, 0, 0, 0.2)",
         // Sombras para tema claro
         "light-sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
         light:
