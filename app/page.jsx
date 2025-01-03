@@ -3,31 +3,23 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import minhaFoto2 from "../public/assets/imageQuadradaRemoveBG.png";
 
+
+import { FaReact } from "react-icons/fa";
+import { SiTypescript, SiMongodb, SiPostgresql } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+import { TbBrandTypescript } from "react-icons/tb";
+import { FaJava } from "react-icons/fa";
+
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    if (savedMode) {
-      setDarkMode(JSON.parse(savedMode));
-    } else {
-      // Se não houver preferência salva, vamos usar o tema claro por padrão
-      setDarkMode(false);
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem("darkMode", JSON.stringify(!darkMode));
-  };
+  const iconSize = { fontSize: "40px", color: "white" };
 
   return (
     <div className="min-h-screen p-4 flex items-center justify-center bg-light-primary">
-      <div className="bg-light-secondary p-4 rounded">
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-          <div className="bg-light-accent p-4 rounded flex items-center justify-center">
-            <div className="bg-light-secondary p-2 rounded-full flex items-center justify-center">
-              <div className="w-[350px] h-[350px] 2xl:w-[600px] 2xl:h-[600px] flex items-center justify-center bg-light-accent rounded-full">
+      <div className="bg-light-secondary rounded-3xl shadow-light-lg">
+        <div className="grid grid-cols-1 xl:grid-cols-[400px_1000px] h-[800px] gap-4">
+          <div className="bg-light-accent p-4 rounded-3xl flex flex-col items-center justify-around">
+            <div className="bg-light-secondary p-2 rounded-full flex items-start justify-center">
+              <div className="flex justify-start bg-light-accent rounded-full">
                 <Image
                   src={minhaFoto2}
                   priority
@@ -39,13 +31,39 @@ export default function Home() {
                 />
               </div>
             </div>
+            <div className="flex flex-col items-center justify-center text-center text-white">
+              <span className="text-3xl font-bold">Oi! sou David👋</span>
+              <span className="text-2xl font-bold">
+                Desenvolvedor Web/Mobile.
+              </span>
+              <p>
+                Mais de 2 anos de experiência em projetos utilizando JavaScript,
+                TypeScript, React, React Native, Next.js, MongoDB e PostgreSQL.
+              </p>
+            </div>
+            <div className="flex flex-row gap-4">
+              <div>
+                <TbBrandTypescript style={iconSize} />
+              </div>
+              <div>
+                <TbBrandReactNative style={iconSize} />
+              </div>
+              <div>
+                <FaReact style={iconSize} />
+              </div>
+              <div>
+                <FaJava style={iconSize} />
+              </div>
+              <div>
+                <SiMongodb style={iconSize} />
+              </div>
+            </div>
           </div>
-          <div className="bg-red-100 p-4 rounded">
-            <div className="grid grid-cols-2 gap-2">
-              <div className="bg-red-200 p-2 rounded">Interno 1</div>
-              <div className="bg-red-200 p-2 rounded">Interno 2</div>
-              <div className="bg-red-200 p-2 rounded">Interno 3</div>
-              <div className="bg-red-200 p-2 rounded">Interno 4</div>
+          <div className="p-4 rounded-xl flex flex-col items-center">
+            <div>
+              <p className="font-zen-dots font-bold text-[144px] leading-none">
+                Portfolio
+              </p>
             </div>
           </div>
         </div>

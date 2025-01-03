@@ -5,7 +5,6 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class", // Habilita modo escuro baseado em classe
   theme: {
     screens: {
       xs: "375px",
@@ -16,6 +15,15 @@ export default {
       "2xl": "1536px",
     },
     extend: {
+      fontFamily: {
+        primary: "var-(--font-zen-dots)",
+        majorMonoDisplay: ["Major Mono Display", "monospace"],
+        michroma: ["Michroma", "sans-serif"],
+        orbitron: ["Orbitron", "sans-serif"],
+        robotoMono: ["Roboto Mono", "monospace"],
+        roboto: ["Roboto", "sans-serif"],
+        "zen-dots": ["Zen Dots", "sans-serif"],
+      },
       colors: {
         // Cores para tema claro
         light: {
