@@ -1,8 +1,17 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import minhaFoto2 from "../public/assets/imageQuadradaRemoveBG.png";
 
+// Images
+import minhaFoto2 from "../public/assets/imageQuadradaRemoveBG.png";
+import BibliotecaWeb from "../public/assets/bibliotecaWEB.png";
+import appBiblioteca from "../public/assets/AppBiblioteca.png";
+import appTela from "../public/assets/appTela.jpg";
+import appTela2 from "../public/assets/appTela2.jpg";
+import iphone from "../public/assets/iphone.png";
+import iphone2 from "../public/assets/iphone2.png";
+import starbucksLandingPage from "../public/assets/starbucks.png";
+import lotofacilLandingPage from "../public/assets/lotofacil.png";
 
 import { FaReact } from "react-icons/fa";
 import { SiTypescript, SiMongodb, SiPostgresql } from "react-icons/si";
@@ -59,11 +68,66 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="p-4 rounded-3xl flex flex-col items-center">
+          <div className="pt-4 rounded-3xl flex flex-col items-center gap-10">
             <div>
-              <p className="font-zen-dots font-bold text-[170px] leading-none">
+              <p className="font-zen-dots font-bold text-[170px] leading-none ">
                 Portfolio
               </p>
+            </div>
+            <div className="flex flex-col w-[940px] gap-10">
+              <div className="h-[320px] w-full flex flex-row items-center justify-between">
+                <div className="h-full relative">
+                  <Image
+                    src={BibliotecaWeb}
+                    alt="Primeira imagem"
+                    className="h-full w-auto rounded-3xl"
+                    objectFit="contain"
+                  />
+                </div>
+
+                <div className="h-full relative">
+                  <Image
+                    src={appTela}
+                    alt="Segunda imagem"
+                    className="h-full w-auto rounded-3xl"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="h-full relative">
+                  <Image
+                    src={appTela2}
+                    alt="Segunda imagem"
+                    className="h-full w-auto rounded-3xl"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
+              <div className="h-[160px] w-full flex flex-row items-center justify-between">
+                <div className="h-full relative">
+                  <Image
+                    src={starbucksLandingPage}
+                    alt="Segunda imagem"
+                    className="h-full w-auto rounded-3xl"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="h-full relative">
+                  <Image
+                    src={lotofacilLandingPage}
+                    alt="Segunda imagem"
+                    className="h-full w-auto rounded-3xl"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="h-full relative">
+                  <Image
+                    src={BibliotecaWeb}
+                    alt="Primeira imagem"
+                    className="h-full w-auto rounded-3xl"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

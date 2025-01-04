@@ -25,6 +25,8 @@ export default {
         "zen-dots": ["Zen Dots", "sans-serif"],
       },
       colors: {
+        "rgba-255-255-255-50": "rgba(255, 255, 255, 0.5)",
+        "rgba-0-0-0-5": "rgba(0, 0, 0, 0.05)",
         // Cores para tema claro
         light: {
           primary: "#e2e2e2",
@@ -54,6 +56,7 @@ export default {
       },
       boxShadow: {
         "right-shadow": "5px 0px 10px rgba(0, 0, 0, 0.2)",
+        inner: "inset",
         // Sombras para tema claro
         "light-sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
         light:
