@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "motion/react";
 
 // images
 import minhaFoto2 from "../public/assets/imageQuadradaRemoveBG.png";
@@ -16,7 +17,12 @@ const Hero = () => {
 
   return (
     <div className="bg-light-accent w-[400px] h-[800px] p-4 rounded-3xl flex flex-col items-center justify-around shadow-right-shadow">
-      <div className="bg-light-secondary p-2 rounded-full flex items-start justify-center">
+      <motion.div
+        className="bg-light-secondary p-2 rounded-full flex items-start justify-center"
+        whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9, type: "spring", stiffness: 400, damping: 10 }}
+
+      >
         <div className="flex justify-start bg-light-accent rounded-full">
           <Image
             src={minhaFoto2}
@@ -28,7 +34,7 @@ const Hero = () => {
             height={250}
           />
         </div>
-      </div>
+      </motion.div>
       <div className="flex flex-col items-center justify-center text-center text-white">
         <span className="text-3xl font-bold">Oi! sou David👋</span>
         <span className="text-2xl font-bold">Desenvolvedor Web/Mobile.</span>

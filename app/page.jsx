@@ -17,12 +17,12 @@ export default function Home() {
           layout
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ type: "spring", stiffness: 200, damping: 8, duration: 0.8 }}
         >
           <Hero />
           <AnimatePresence mode="popLayout">
             {/* <ComTeste /> */}
-            {/* <Portfolio /> */}
+            <Portfolio />
           </AnimatePresence>
         </motion.div>
       </AnimatePresence>
