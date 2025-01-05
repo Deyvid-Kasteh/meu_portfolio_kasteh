@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import * as motion from "motion/react-client";
+
 
 // Images
 import minhaFoto2 from "../public/assets/imageQuadradaRemoveBG.png";
@@ -18,15 +20,27 @@ import { SiTypescript, SiMongodb, SiPostgresql } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { TbBrandTypescript } from "react-icons/tb";
 import { FaJava } from "react-icons/fa";
+import Portfolio from "./portfolio/page";
 
 export default function Home() {
+  // const [showSecondDiv, setShowSecondDiv] = useState(false);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     console.log("showSecondDiv");
+  //     setShowSecondDiv(true);
+  //   }, 5000); // 5 segundos
+
+  //   return () => clearTimeout(timer);
+  // }, []);
+
   const iconSize = { fontSize: "40px", color: "white" };
 
   return (
     <div className="min-h-screen p-4 flex items-center justify-center bg-light-primary">
       <div className="bg-light-secondary rounded-3xl shadow-light-lg">
-        <div className="grid grid-cols-1 xl:grid-cols-[400px_1000px] h-[800px] gap-4 ">
-          <div className="bg-light-accent p-4 rounded-3xl flex flex-col items-center justify-around shadow-right-shadow">
+        <div className="flex flex-row gap-4 overflow-hidden">
+          <div className="bg-light-accent w-[400px] h-[800px] p-4 rounded-3xl flex flex-col items-center justify-around shadow-right-shadow">
             <div className="bg-light-secondary p-2 rounded-full flex items-start justify-center">
               <div className="flex justify-start bg-light-accent rounded-full">
                 <Image
@@ -68,7 +82,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="pt-4 rounded-3xl flex flex-col items-center gap-10">
+          {/* <Portfolio/> */}
+          <Portfolio />
+
+          {/* <div className="pt-4 rounded-3xl flex flex-col items-center gap-10">
             <div>
               <p className="font-zen-dots font-bold text-[170px] leading-none ">
                 Portfolio
@@ -76,60 +93,66 @@ export default function Home() {
             </div>
             <div className="flex flex-col w-[940px] gap-10">
               <div className="h-[320px] w-full flex flex-row items-center justify-between">
-                <div className="h-full relative">
+                <div className="h-full relative transition-transform duration-300 hover:scale-105">
                   <Image
                     src={BibliotecaWeb}
                     alt="Primeira imagem"
                     className="h-full w-auto rounded-3xl"
-                    objectFit="contain"
+                    // objectFit="contain"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
 
-                <div className="h-full relative">
+                <div className="h-full relative transition-transform duration-300 hover:scale-105">
                   <Image
                     src={appTela}
                     alt="Segunda imagem"
                     className="h-full w-auto rounded-3xl"
-                    objectFit="contain"
+                    // objectFit="contain"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
-                <div className="h-full relative">
+                <div className="h-full relative transition-transform duration-300 hover:scale-105">
                   <Image
                     src={appTela2}
                     alt="Segunda imagem"
                     className="h-full w-auto rounded-3xl"
-                    objectFit="contain"
+                    // objectFit="contain"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
               </div>
               <div className="h-[160px] w-full flex flex-row items-center justify-between">
-                <div className="h-full relative">
+                <div className="h-full relative transition-transform duration-300 hover:scale-105">
                   <Image
                     src={starbucksLandingPage}
                     alt="Segunda imagem"
                     className="h-full w-auto rounded-3xl"
-                    objectFit="contain"
+                    // objectFit="contain"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
-                <div className="h-full relative">
+                <div className="h-full relative transition-transform duration-300 hover:scale-105">
                   <Image
                     src={lotofacilLandingPage}
                     alt="Segunda imagem"
                     className="h-full w-auto rounded-3xl"
-                    objectFit="contain"
+                    // objectFit="contain"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
-                <div className="h-full relative">
+                <div className="h-full relative transition-transform duration-300 hover:scale-105">
                   <Image
                     src={BibliotecaWeb}
                     alt="Primeira imagem"
                     className="h-full w-auto rounded-3xl"
-                    objectFit="contain"
+                    // objectFit="contain"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
