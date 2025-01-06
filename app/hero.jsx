@@ -16,7 +16,19 @@ const Hero = () => {
   const iconSize = { fontSize: "40px", color: "white" };
 
   return (
-    <div className="bg-light-accent w-[400px] h-[800px] p-4 rounded-3xl flex flex-col items-center justify-around shadow-right-shadow">
+    // <AnimatePresence mode="popLayout">
+    <motion.div
+      layout
+      // initial={{ opacity: 0, scale: 0.6 }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+      }}
+      transition={{ duration: 1 }}
+      exit={{ opacity: 0 }}
+      className="bg-light-accent w-[400px] h-[800px] p-4 rounded-3xl flex flex-col items-center justify-around shadow-right-shadow z-400"
+    >
       <motion.div
         className="bg-light-secondary p-2 rounded-full flex items-start justify-center"
         whileHover={{ scale: 1.1 }}
@@ -59,7 +71,8 @@ const Hero = () => {
           <SiMongodb style={iconSize} />
         </div>
       </div>
-    </div>
+    </motion.div>
+    // </AnimatePresence>
   );
 };
 

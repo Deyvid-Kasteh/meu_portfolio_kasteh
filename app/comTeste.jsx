@@ -29,8 +29,20 @@ const ComTeste = () => {
         borderRadius: "8px",
       }}
     >
+      <div
+        style={{
+          padding: "10px",
+          margin: "5px 0",
+          background: "lightcoral",
+          color: "#fff",
+          borderRadius: "4px",
+        }}
+      >
+        000
+      </div>
       <motion.div
         layout
+        transition={{ duration: 0.6 }}
         style={{
           padding: "10px",
           border: "2px solid lightblue",
@@ -38,7 +50,18 @@ const ComTeste = () => {
           background: "#f0f8ff",
         }}
       >
-        <AnimatePresence>
+        <div
+          style={{
+            padding: "10px",
+            margin: "5px 0",
+            background: "lightcoral",
+            color: "#fff",
+            borderRadius: "4px",
+          }}
+        >
+          000
+        </div>
+        <AnimatePresence mode="sync">
           {items.map((item) => (
             <motion.div
               key={item}
@@ -46,7 +69,7 @@ const ComTeste = () => {
               initial={{ opacity: 0, scale: 0.4 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.4 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.6 }}
               style={{
                 padding: "10px",
                 margin: "5px 0",

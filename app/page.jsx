@@ -8,33 +8,33 @@ import Portfolio from "./portfolio/page";
 import ComTeste from "./comTeste";
 
 export default function Home() {
+  const visiblePortfolio = true;
   return (
-    // <ComTeste />
     <div className="h-screen p-4 flex items-center justify-center bg-light-primary overflow-auto">
-      <AnimatePresence mode="popLayout">
-        <motion.div
-          className="bg-light-secondary rounded-3xl shadow-light-lg flex flex-row gap-4 overflow-hidden"
-          layout
-          initial={{ opacity: 0, scale: 0.6 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            duration: 0.8,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 200,
-            damping: 8,
-            duration: 0.4,
-          }}
-        >
+      <motion.ul
+        layout
+        initial={{ opacity: 0, scale: 0.6 }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+        }}
+        transition={{ duration: 1 }}
+        className="bg-light-secondary rounded-3xl shadow-light-lg flex flex-row gap-4 overflow-hidden"
+      >
+        <motion.li>
           <Hero />
-          <AnimatePresence mode="popLayout">
-            {/* <ComTeste /> */}
-            {/* <Portfolio /> */}
-          </AnimatePresence>
-        </motion.div>
-      </AnimatePresence>
+        </motion.li>
+        {/* <Hero /> */}
+
+        {/* <Hero /> */}
+        {/* <Portfolio /> */}
+        {visiblePortfolio && (
+          <motion.li>
+            <Portfolio />
+          </motion.li>
+        )}
+      </motion.ul>
     </div>
   );
 }
