@@ -17,11 +17,13 @@ const Portfolio = () => {
   return (
     <motion.div
       className="pt-4 rounded-3xl flex flex-col items-center gap-10 pr-4"
-      initial={{ opacity: 0, duration: 3 }}
-      animate={{ opacity: 1, duration: 3 }}
-      exit={{ opacity: 0, duration: 0.2 }}
-      // transition={{ duration: 3 }}
+      // initial={{ opacity: 0, duration: 3 }}
+      // animate={{ opacity: 1, duration: 3 }}
+      exit={{ opacity: 0 }}
       // style={{ x: -20 }}
+      initial={{ opacity: 0, transform: "translateX(-100px)" }}
+      animate={{ opacity: 1, transform: "translateX(0px)" }}
+      // transition={{ type: "spring" }}
     >
       <div>
         <p className="font-zen-dots font-bold text-[170px] leading-none ">

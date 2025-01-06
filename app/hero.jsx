@@ -20,8 +20,7 @@ const Hero = () => {
       <motion.div
         className="bg-light-secondary p-2 rounded-full flex items-start justify-center"
         whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9, type: "spring", stiffness: 400, damping: 10 }}
-
+        whileTap={{ scale: 0.9, type: "spring", stiffness: 400, damping: 10 }}
       >
         <div className="flex justify-start bg-light-accent rounded-full">
           <Image
