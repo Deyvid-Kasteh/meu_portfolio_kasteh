@@ -1,37 +1,49 @@
 import React from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { Home, Users, Settings, Menu, X } from "lucide-react";
+import { motion } from "motion/react";
+import { BriefcaseBusiness, FileText, Mail, Earth } from "lucide-react";
 
 const Nav = () => {
   const iconColor = "#8184d3";
-  const menuItems = [
-    { icon: Home, text: "Início" },
-    { icon: Users, text: "Usuários" },
-    { icon: Settings, text: "Configurações" },
-  ];
   return (
     <motion.div className="flex flex-col items-center h-full rounded-3xl">
-      <nav className="relative mt-4 flex flex-col h-full">
+      <nav className=" flex flex-col h-full justify-around">
         <motion.a
-          className="flex cursor-pointer px-4 py-3 rounded-full h-[160px]"
-          //   whileHover={{ backgroundColor: "#8184d3", color: "white" }}
+          className="relative flex cursor-pointer px-4 py-3 rounded-full h-[160px] text-[#8184d3]"
+          whileHover={{ color: "#6c6eb1" }}
         >
-          <Home size={34} color={iconColor} />
-          <motion.span className="absolute top-[70px] right-1.5 ml-2 rotate-90 text-xl font-bold text-[#8184d3]">
-            Início
+          <BriefcaseBusiness size={34} />
+          <motion.span className="absolute top-[80px] -right-2 ml-2 rotate-90 text-xl font-bold ">
+            Portfolio
+          </motion.span>
+        </motion.a>
+
+        <motion.a
+          className="relative flex cursor-pointer px-4 py-3 h-[160px] text-[#8184d3]"
+          whileHover={{ color: "#6c6eb1" }}
+        >
+          <FileText size={34} />
+          <motion.span className="absolute top-[80px] -right-0.5 ml-2 rotate-90 text-xl font-bold">
+            Resume
+          </motion.span>
+        </motion.a>
+
+        <motion.a
+          className="relative flex cursor-pointer px-4 py-3 rounded-full h-[160px] text-[#8184d3]"
+          whileHover={{ color: "#6c6eb1" }}
+        >
+          <Mail size={34} />
+          <motion.span className="absolute top-[75px] -right-1 ml-2 rotate-90 text-xl font-bold ">
+            Contato
           </motion.span>
         </motion.a>
         <motion.a
-          className="flex cursor-pointer px-4 py-3 rounded-full h-[100px]"
-          whileHover={{ backgroundColor: "#8184d3", color: "white" }}
+          className="relative flex cursor-pointer px-4 py-3 rounded-full h-[160px] text-[#8184d3]"
+          whileHover={{ color: "#6c6eb1" }}
         >
-          <Users size={34} color={iconColor} />
-        </motion.a>
-        <motion.a
-          className="flex cursor-pointer px-4 py-3 rounded-full h-[100px]"
-          whileHover={{ backgroundColor: "#8184d3", color: "white" }}
-        >
-          <Settings size={34} color={iconColor} />
+          <Earth size={34} />
+          <motion.span className="absolute top-[95px] -right-5 ml-2 rotate-90 text-xl font-bold ">
+            Linguagens
+          </motion.span>
         </motion.a>
       </nav>
     </motion.div>
