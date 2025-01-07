@@ -2,20 +2,24 @@ import React from "react";
 import { motion } from "motion/react";
 import { BriefcaseBusiness, FileText, Mail, Earth } from "lucide-react";
 
-const Nav = () => {
+const Nav = ({ isOpen, setIsOpen, openPortfolio, setOpenPortfolio }) => {
   const iconColor = "#8184d3";
   return (
     <motion.div className="flex flex-col items-center h-full rounded-3xl">
       <nav className=" flex flex-col h-full justify-around">
-        <motion.a
+        <motion.button
           className="relative flex cursor-pointer px-4 py-3 rounded-full h-[160px] text-[#8184d3]"
           whileHover={{ color: "#494c94" }}
+          onClick={() => {
+            setIsOpen(!isOpen);
+            setOpenPortfolio(!openPortfolio);
+          }}
         >
           <BriefcaseBusiness size={34} />
           <motion.span className="absolute top-[80px] -right-2 ml-2 rotate-90 text-xl font-bold ">
             Portfolio
           </motion.span>
-        </motion.a>
+        </motion.button>
 
         <motion.a
           className="relative flex cursor-pointer px-4 py-3 h-[160px] text-[#8184d3]"

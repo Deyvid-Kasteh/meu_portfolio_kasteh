@@ -14,16 +14,8 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { FaJava } from "react-icons/fa";
 import Nav from "./nav";
 
-const Hero = () => {
+const Hero = ( { isOpen, setIsOpen, openPortfolio, setOpenPortfolio }) => {
   const iconSize = { fontSize: "40px", color: "white" };
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const menuItems = [
-    { icon: Home, text: "Início" },
-    { icon: Users, text: "Usuários" },
-    { icon: Settings, text: "Configurações" },
-  ];
 
   return (
     <motion.div
@@ -130,7 +122,7 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-      {isOpen && <Nav />}
+      {isOpen && <Nav isOpen={isOpen} setIsOpen={setIsOpen} openPortfolio={openPortfolio} setOpenPortfolio={setOpenPortfolio} />}
     </motion.div>
   );
 };
