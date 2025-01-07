@@ -9,7 +9,7 @@ const Nav = () => {
       <nav className=" flex flex-col h-full justify-around">
         <motion.a
           className="relative flex cursor-pointer px-4 py-3 rounded-full h-[160px] text-[#8184d3]"
-          whileHover={{ color: "#6c6eb1" }}
+          whileHover={{ color: "#494c94" }}
         >
           <BriefcaseBusiness size={34} />
           <motion.span className="absolute top-[80px] -right-2 ml-2 rotate-90 text-xl font-bold ">
@@ -19,7 +19,7 @@ const Nav = () => {
 
         <motion.a
           className="relative flex cursor-pointer px-4 py-3 h-[160px] text-[#8184d3]"
-          whileHover={{ color: "#6c6eb1" }}
+          whileHover={{ color: "#494c94" }}
         >
           <FileText size={34} />
           <motion.span className="absolute top-[80px] -right-0.5 ml-2 rotate-90 text-xl font-bold">
@@ -29,7 +29,7 @@ const Nav = () => {
 
         <motion.a
           className="relative flex cursor-pointer px-4 py-3 rounded-full h-[160px] text-[#8184d3]"
-          whileHover={{ color: "#6c6eb1" }}
+          whileHover={{ color: "#494c94" }}
         >
           <Mail size={34} />
           <motion.span className="absolute top-[75px] -right-1 ml-2 rotate-90 text-xl font-bold ">
@@ -38,7 +38,7 @@ const Nav = () => {
         </motion.a>
         <motion.a
           className="relative flex cursor-pointer px-4 py-3 rounded-full h-[160px] text-[#8184d3]"
-          whileHover={{ color: "#6c6eb1" }}
+          whileHover={{ color: "#494c94" }}
         >
           <Earth size={34} />
           <motion.span className="absolute top-[95px] -right-5 ml-2 rotate-90 text-xl font-bold ">
