@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Hero from "./hero";
 import Portfolio from "./portfolio/page";
 import ComTeste from "./comTeste";
+import ComTeste2 from "./comTeste2";
 
 export default function Home() {
   const visiblePortfolio = true;
@@ -29,11 +30,17 @@ export default function Home() {
 
         {/* <Hero /> */}
         {/* <Portfolio /> */}
-        {visiblePortfolio && (
+        {/* {visiblePortfolio && (
           <motion.li>
             <Portfolio />
+            <ComTeste />
+
+            <ComTeste2 />
           </motion.li>
-        )}
+        )} */}
+        {/* <motion.li>
+          <Hero />
+        </motion.li> */}
       </motion.ul>
     </div>
   );
