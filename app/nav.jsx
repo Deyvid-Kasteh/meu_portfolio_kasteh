@@ -5,7 +5,7 @@ import { BriefcaseBusiness, FileText, Mail, Earth } from "lucide-react";
 const Nav = ({ isOpen, setIsOpen, openPortfolio, setOpenPortfolio }) => {
   const iconColor = "#8184d3";
   return (
-    <motion.div className="flex flex-col items-center h-full rounded-3xl">
+    <motion.div className="flex flex-col items-center h-full rounded-r-3xl">
       <nav className=" flex flex-col h-full justify-around">
         <motion.button
           className="relative flex cursor-pointer px-4 py-3 rounded-full h-[160px] text-[#8184d3]"

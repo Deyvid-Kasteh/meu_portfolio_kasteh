@@ -54,7 +54,7 @@ const Portfolio = () => {
             <Image
               src={BibliotecaWeb}
               alt="Primeira imagem"
-              className="h-full w-auto rounded-3xl"
+              className="h-full w-auto rounded-3xl hover:shadow-xl"
               // objectFit="contain"
               style={{ objectFit: "contain" }}
             />
@@ -64,7 +64,7 @@ const Portfolio = () => {
             <Image
               src={appTela}
               alt="Segunda imagem"
-              className="h-full w-auto rounded-3xl"
+              className="h-full w-auto rounded-3xl hover:shadow-xl"
               // objectFit="contain"
               style={{ objectFit: "contain" }}
             />
@@ -73,7 +73,7 @@ const Portfolio = () => {
             <Image
               src={appTela2}
               alt="Segunda imagem"
-              className="h-full w-auto rounded-3xl"
+              className="h-full w-auto rounded-3xl hover:shadow-xl"
               // objectFit="contain"
               style={{ objectFit: "contain" }}
             />
@@ -84,7 +84,7 @@ const Portfolio = () => {
             <Image
               src={starbucksLandingPage}
               alt="Segunda imagem"
-              className="h-full w-auto rounded-3xl"
+              className="h-full w-auto rounded-3xl hover:shadow-xl"
               // objectFit="contain"
               style={{ objectFit: "contain" }}
             />
@@ -93,7 +93,7 @@ const Portfolio = () => {
             <Image
               src={lotofacilLandingPage}
               alt="Segunda imagem"
-              className="h-full w-auto rounded-3xl"
+              className="h-full w-auto rounded-3xl hover:shadow-xl"
               // objectFit="contain"
               style={{ objectFit: "contain" }}
             />
@@ -102,7 +102,7 @@ const Portfolio = () => {
             <Image
               src={BibliotecaWeb}
               alt="Primeira imagem"
-              className="h-full w-auto rounded-3xl"
+              className="h-full w-auto rounded-3xl hover:shadow-xl"
               // objectFit="contain"
               style={{ objectFit: "contain" }}
             />

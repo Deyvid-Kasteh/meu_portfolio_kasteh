@@ -7,6 +7,7 @@ import Hero from "./hero";
 import Portfolio from "./portfolio/page";
 import ComTeste from "./comTeste";
 import ComTeste2 from "./comTeste2";
+import Resume from "./resume/page";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,6 +50,9 @@ export default function Home() {
         {/* <motion.li>
           <Hero />
         </motion.li> */}
+        <motion.li>
+          <Resume />
+        </motion.li>
       </motion.ul>
     </div>
   );
