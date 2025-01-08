@@ -14,7 +14,14 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { FaJava } from "react-icons/fa";
 import Nav from "./nav";
 
-const Hero = ( { isOpen, setIsOpen, openPortfolio, setOpenPortfolio }) => {
+const Hero = ({
+  isOpen,
+  setIsOpen,
+  openPortfolio,
+  setOpenPortfolio,
+  openResume,
+  setOpenResume,
+}) => {
   const iconSize = { fontSize: "40px", color: "white" };
 
   return (
@@ -31,7 +38,6 @@ const Hero = ( { isOpen, setIsOpen, openPortfolio, setOpenPortfolio }) => {
         type: "spring",
         stiffness: 100,
       }}
-      // exit={{ opacity: 0 }}
     >
       <motion.div
         layout
@@ -58,26 +64,6 @@ const Hero = ( { isOpen, setIsOpen, openPortfolio, setOpenPortfolio }) => {
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </motion.button>
-          {/* <nav className="flex flex-row items-center justify-center">
-            <motion.ul className="flex flex-row items-center justify-center">
-              {isOpen &&
-                menuItems.map((item, index) => (
-                  <motion.li key={index}>
-                    <motion.a href={"#"} key={index}>
-                      <item.icon size={24} />
-                      <motion.span
-                        className="ml-4"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.1 }}
-                      >
-                        {item.text}
-                      </motion.span>
-                    </motion.a>
-                  </motion.li>
-                ))}
-            </motion.ul>
-          </nav> */}
         </motion.div>
         <motion.div
           className="bg-light-secondary p-2 rounded-full flex items-start justify-center"
@@ -122,7 +108,16 @@ const Hero = ( { isOpen, setIsOpen, openPortfolio, setOpenPortfolio }) => {
           </div>
         </div>
       </motion.div>
-      {isOpen && <Nav isOpen={isOpen} setIsOpen={setIsOpen} openPortfolio={openPortfolio} setOpenPortfolio={setOpenPortfolio} />}
+      {isOpen && (
+        <Nav
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          openPortfolio={openPortfolio}
+          setOpenPortfolio={setOpenPortfolio}
+          openResume={openResume}
+          setOpenResume={setOpenResume}
+        />
+      )}
     </motion.div>
   );
 };

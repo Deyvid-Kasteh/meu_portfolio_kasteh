@@ -44,7 +44,7 @@ const Portfolio = () => {
       // transition={{ type: "spring" }}
     >
       <div>
-        <p className="font-zen-dots font-bold text-[170px] leading-none ">
+        <p className="font-zen-dots font-bold text-[170px] leading-none text-light-accent">
           Portfolio
         </p>
       </div>

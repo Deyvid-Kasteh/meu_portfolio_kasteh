@@ -12,6 +12,7 @@ import Resume from "./resume/page";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [openPortfolio, setOpenPortfolio] = useState(false);
+  const [openResume, setOpenResume] = useState(false);
 
   const visiblePortfolio = false;
   return (
@@ -33,6 +34,8 @@ export default function Home() {
             setIsOpen={setIsOpen}
             openPortfolio={openPortfolio}
             setOpenPortfolio={setOpenPortfolio}
+            openResume={openResume}
+            setOpenResume={setOpenResume}
           />
         </motion.li>
         {/* <Hero /> */}
@@ -42,17 +45,13 @@ export default function Home() {
         {openPortfolio && (
           <motion.li>
             <Portfolio />
-            {/* <ComTeste />
-
-            <ComTeste2 /> */}
           </motion.li>
         )}
-        {/* <motion.li>
-          <Hero />
-        </motion.li> */}
-        <motion.li>
-          <Resume />
-        </motion.li>
+        {openResume && (
+          <motion.li>
+            <Resume />
+          </motion.li>
+        )}
       </motion.ul>
     </div>
   );
