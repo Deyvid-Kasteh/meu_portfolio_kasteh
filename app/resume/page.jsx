@@ -6,8 +6,9 @@ import Image from "next/image";
 const Resume = () => {
   return (
     <motion.div
-      className="pt-4 flex flex-col items-center gap-1 w-[900px] h-full"
+      className="w-[1000px] pt-4 flex flex-col items-center gap-1 h-full"
       layout
+      // animação entrada do portfolio
       initial={{
         opacity: 0,
       }}
@@ -18,7 +19,9 @@ const Resume = () => {
         opacity: 0,
         scale: 0.8,
       }}
-      transition={{ delay: 2, duration: 0.2 }}
+      transition={{
+        duration: 0.2,
+      }}
     >
       <div>
         <p className="font-zen-dots font-bold text-[170px] leading-none text-light-accent">
@@ -55,7 +58,14 @@ const Resume = () => {
           </motion.button>
           <motion.button
             className="flex bg-light-primary w-[180px] h-12 rounded-md items-center justify-center font-bold text-light-accent"
-            whileHover={{ scale: 1.1, backgroundColor: "#8184d3" }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#8184d3",
+              color: "white",
+              fontWeight: "bold",
+              alignItems: "center",
+              justifyItems: "center",
+            }}
           >
             Sobre mim
           </motion.button>

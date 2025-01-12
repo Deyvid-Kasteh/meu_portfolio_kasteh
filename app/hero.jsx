@@ -26,7 +26,7 @@ const Hero = ({
 
   return (
     <motion.div
-      className="flex flex-row items-center justify-center h-[800px] "
+      className="flex flex-row items-center justify-center h-[800px] relative z-20"
       layout
       // animate={{
       //   opacity: 1,
@@ -34,7 +34,7 @@ const Hero = ({
       //   duration: 0.8,
       // }}
       transition={{
-        duration: 0.3,
+        duration: 0.8,
         type: "spring",
         stiffness: 100,
       }}

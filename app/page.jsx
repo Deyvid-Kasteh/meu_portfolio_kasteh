@@ -25,8 +25,8 @@ export default function Home() {
           scale: 1,
           duration: 0.8,
         }}
-        transition={{ duration: 1 }}
-        className="bg-light-secondary rounded-3xl shadow-light-lg flex flex-row gap-4 overflow-hidden"
+        transition={{ duration: 0.2, type: "spring", stiffness: 100 }}
+        className="bg-light-secondary rounded-3xl shadow-light-lg flex flex-row gap-4 overflow-hidden relative"
       >
         <motion.li>
           <Hero
@@ -38,10 +38,6 @@ export default function Home() {
             setOpenResume={setOpenResume}
           />
         </motion.li>
-        {/* <Hero /> */}
-
-        {/* <Hero /> */}
-        {/* <Portfolio /> */}
         {openPortfolio && (
           <motion.li>
             <Portfolio />

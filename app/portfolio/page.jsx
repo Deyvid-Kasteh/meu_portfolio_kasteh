@@ -16,32 +16,22 @@ import lotofacilLandingPage from "../../public/assets/lotofacil.png";
 const Portfolio = () => {
   return (
     <motion.div
-      className="pt-4 rounded-3xl flex flex-col items-center gap-10 pr-4"
+      className="w-[1000px] pt-4 rounded-3xl flex flex-col items-center gap-10 px-4"
       layout
+      // animação entrada do portfolio
       initial={{
         opacity: 0,
-        // scale: 0.8,
-        // transform: "translateX(-500px)",
       }}
       animate={{
         opacity: 1,
-        // scale: 1,
-        // transform: "translateX(0px)",
       }}
       exit={{
         opacity: 0,
         scale: 0.8,
-        // transform: "translateX(-100px)"
       }}
-      transition={{ delay: 2, duration: 0.2 }}
-
-      // initial={{ opacity: 0, duration: 3 }}
-      // animate={{ opacity: 1, duration: 3 }}
-      // style={{ x: -20 }}
-      // initial={{ opacity: 0, transform: "translateX(-100px)" }}
-      // animate={{ opacity: 1, transform: "translateX(0px)" }}
-      // exit={{ opacity: 0 }}
-      // transition={{ type: "spring" }}
+      transition={{
+        duration: 0.2,
+      }}
     >
       <div>
         <p className="font-zen-dots font-bold text-[170px] leading-none text-light-accent">

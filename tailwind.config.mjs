@@ -72,6 +72,7 @@ export default {
           "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3)",
         "dark-lg":
           "0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3)",
+        direita: "8px 0 8px rgba(0, 0, 0, 0.1)", // Sombra à direita
       },
       spacing: {
         18: "4.5rem",
